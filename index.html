@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Tech</title>
+    <link rel="shortcut icon" href="https://thumbs.dreamstime.com/z/smartphone-repair-logo-icon-illustration-design-smartphone-repair-logo-icon-illustration-design-template-149348003.jpg" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        /* color: blue; */
+        font-size: 25px;
+      }
+
+      .dark-mode {
+        background-color: black;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- navbar here -->
+      <div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container container-fluid mt-4 mb-4">
+            <a class="navbar-brand fw-bold fs-2 text-primary" href="#"
+              >Mobile Tech</a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active fs-6" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6" href="#">Mobile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link fs-6">About</a>
+                </li>
+              </ul>
+              <input
+                id="search-field"
+                class="form-control me-2 w-50"
+                type="search"
+                placeholder="Search Your Phone"
+                aria-label="Search"
+              />
+              <button
+                id="btn-search"
+                class="btn btn-outline-success me-5"
+                type="submit"
+              >
+                Search
+              </button>
+            </div>
+            <div class="mb-2 h">
+              <button onclick="darkMode()" class="fs-6">Dark Mode</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- display search phone result -->
+      <section>
+        <!-----phone result --->
+        <div
+          id="phone-container"
+          class="row row-cols-1 row-cols-md-3 g-4 mt-4 mb-4"
+        ></div>
+
+        <!-- no msg result here -->
+        <div id="no-phone-msg" class="d-none mt-4">
+          <h3 class="text-center">No found Result</h3>
+        </div>
+
+        <!-- show all btn make here -->
+        <div id="showall" class="text-center d-none mb-5">
+          <button id="btn-show-all" class="btn btn-primary">Show All</button>
+        </div>
+      </section>
+
+      <!-- spinner added here -->
+      <section id="loader" class="d-none">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- modal section here -->
+      <section>
+        <!-- Button trigger modal -->
+
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="phoneModalDetails"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="phoneModalDetails"></h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div id="phone-details" class="modal-body"></div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h2 class="text-center">Copyright © 2022 || Tajin Shawon</h2>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
